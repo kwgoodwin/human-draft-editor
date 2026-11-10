@@ -1,0 +1,79 @@
+{
+  "results": [
+    {
+      "id": "business-conditions",
+      "edited_text": "The pilot may start on May 12 if security approves it. It covers 18 accounts, not all customers. We have not measured any savings.",
+      "notes": []
+    },
+    {
+      "id": "audit-only",
+      "edited_text": null,
+      "notes": [
+        "‘This is important’ and ‘That distinction matters’ both announce significance without explaining it. Together, they make the framing repetitive.",
+        "‘The plan is not final’ appears twice verbatim. The second occurrence adds emphasis but no new information, so the passage stalls instead of developing the point."
+      ]
+    },
+    {
+      "id": "already-good",
+      "edited_text": "## Cache refresh\n\nThe cache expires after 15 minutes. A failed refresh does not extend that interval.\n\n- Keep serving the previous value.\n- Stop when the fallback timer expires.",
+      "notes": []
+    },
+    {
+      "id": "quotes-links",
+      "edited_text": "The memo says, “The deadline is June 4.” The [memo](https://example.org/memo) supports that date. A separate [order](https://example.org/order) allows an extension only if the applicant files a request.",
+      "notes": []
+    },
+    {
+      "id": "voice-sample",
+      "edited_text": "Our team compared two document layouts. Three reviewers preferred the shorter layout. We have not tested it with the rest of the team.",
+      "notes": []
+    },
+    {
+      "id": "extra-source-fact",
+      "edited_text": "The pilot may reduce waiting time. The report does not establish whether the result will hold elsewhere.",
+      "notes": []
+    },
+    {
+      "id": "independent-components",
+      "edited_text": "Headline: Proposed rule may require notice\n\nExcerpt: The proposed rule may require notice if adopted; it is not currently in force.\n\nBody: The proposal would require notice only for covered employers. It has not been adopted.",
+      "notes": []
+    },
+    {
+      "id": "scientific-limits",
+      "edited_text": "During the 8-week pilot, the change was associated with a drop in errors from 18% to 12% among 50 reviewers. The pilot did not establish causation.",
+      "notes": []
+    },
+    {
+      "id": "retry-condition",
+      "edited_text": "Do not retry a failed payment unless the provider confirms that no charge occurred. If the result is unknown, stop and reconcile it.",
+      "notes": []
+    },
+    {
+      "id": "unsupported-universal",
+      "edited_text": "The trial proves the treatment is safe for everyone.",
+      "notes": [
+        "Factual concern: ‘proves’ and ‘safe for everyone’ make a universal safety claim that a trial may not support. Check the trial’s population, findings and limitations. The claim is preserved here as requested, not independently verified."
+      ]
+    },
+    {
+      "id": "unidentified-actor",
+      "edited_text": "The files may have been deleted before the audit. It is unknown who deleted them or whether the deletion was intentional.",
+      "notes": []
+    },
+    {
+      "id": "draft-only",
+      "edited_text": "The brief was accepted—but the court did not decide the argument.",
+      "notes": []
+    },
+    {
+      "id": "full-rewrite",
+      "edited_text": "I tested two note-taking templates with four colleagues over three weeks. It was a small trial.\n\nAll four colleagues found the shorter template easier to scan. We did not measure whether either template improved decisions.\n\nWe may try the shorter template with a second team if that team agrees. We have not decided on a next step or a rollout.",
+      "notes": []
+    },
+    {
+      "id": "financial-ceiling",
+      "edited_text": "Eligible customers may receive a service credit of up to $30,000 if they request it by June 30 and the vendor approves the request. The maximum is not a guaranteed payment. No credit has been awarded under this proposal.",
+      "notes": []
+    }
+  ]
+}

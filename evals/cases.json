@@ -1,0 +1,174 @@
+[
+  {
+    "id": "business-conditions",
+    "instruction": "Light edit for a concise internal business update. Do not add facts.",
+    "text": "At this point in time, the pilot may start on May 12 if security approves it. It covers 18 accounts, not all customers. We have not measured any savings.",
+    "checks": {
+      "preserve_literals": [
+        "May 12",
+        "18"
+      ],
+      "forbid_literals": [
+        "measured savings",
+        "all customers are covered"
+      ]
+    },
+    "manual": "Start remains conditional; may is not will; excludes all-customer scope; no claimed savings."
+  },
+  {
+    "id": "audit-only",
+    "instruction": "Audit this for repetitive framing. Do not rewrite it.",
+    "text": "This is important. The plan is not final. That distinction matters. The plan is not final.",
+    "checks": {
+      "audit_only": true
+    },
+    "manual": "Diagnoses repetition with a specific example; edited_text is null; does not rewrite."
+  },
+  {
+    "id": "already-good",
+    "instruction": "Light edit only if there is a clear improvement. Preserve useful Markdown.",
+    "text": "## Cache refresh\n\nThe cache expires after 15 minutes. A failed refresh does not extend that interval.\n\n- Keep serving the previous value.\n- Stop when the fallback timer expires.",
+    "checks": {
+      "unchanged": true
+    },
+    "manual": "No cosmetic rewrite; heading, paragraphs and list remain intact."
+  },
+  {
+    "id": "quotes-links",
+    "instruction": "Light edit; preserve the quotation and citation links exactly.",
+    "text": "It is worth noting that the memo says, “The deadline is June 4.” The [memo](https://example.org/memo) supports that date. A separate [order](https://example.org/order) allows an extension only if the applicant files a request.",
+    "checks": {
+      "preserve_literals": [
+        "“The deadline is June 4.”",
+        "https://example.org/memo",
+        "https://example.org/order"
+      ]
+    },
+    "manual": "Memo supports deadline; order supports conditional extension; no detached citation or unconditional permission."
+  },
+  {
+    "id": "voice-sample",
+    "instruction": "Edit this personal LinkedIn draft with the direct, spare cadence of my sample. Do not add personal facts.",
+    "context": "Voice sample: “I take the early train. I want a decision, not another meeting.” This sample is for style only.",
+    "text": "Our team compared two document layouts. Three reviewers preferred the shorter layout. We have not tested it with the rest of the team.",
+    "checks": {
+      "preserve_literals": [
+        "Three"
+      ],
+      "forbid_literals": [
+        "train",
+        "I want",
+        "I learned",
+        "I discovered"
+      ]
+    },
+    "manual": "Direct cadence without transferring sample biography, adding first-person experience or claiming wider support."
+  },
+  {
+    "id": "extra-source-fact",
+    "instruction": "Style-only edit. Do not add or correct substantive facts from background notes.",
+    "context": "Background note: a source says the pilot had 60 participants. This note is not authorization to expand the draft.",
+    "text": "The pilot may reduce waiting time. The report does not establish whether the result will hold elsewhere.",
+    "checks": {
+      "forbid_literals": [
+        "60"
+      ]
+    },
+    "manual": "No new participant count; potential benefit and external-validity limit retained."
+  },
+  {
+    "id": "independent-components",
+    "instruction": "Lightly edit each separately displayed component. Keep the qualifications needed for each to stand alone.",
+    "text": "Headline: Proposed rule may require notice\n\nExcerpt: The proposed rule may require notice if adopted; it is not currently in force.\n\nBody: The proposal would require notice only for covered employers. It has not been adopted.",
+    "checks": {
+      "preserve_literals": [
+        "Headline:",
+        "Excerpt:",
+        "Body:"
+      ]
+    },
+    "manual": "Each standalone component retains proposed/conditional posture; body scope remains covered employers only."
+  },
+  {
+    "id": "scientific-limits",
+    "instruction": "Make this technical summary easier to read without changing its evidentiary strength.",
+    "text": "In the 8-week pilot, the change was associated with a decline from 18% to 12% in errors among 50 reviewers. It did not establish causation.",
+    "checks": {
+      "preserve_literals": [
+        "8-week",
+        "18%",
+        "12%",
+        "50"
+      ]
+    },
+    "manual": "No causal claim, unchanged denominator/time window/direction; explicit lack of established causation remains."
+  },
+  {
+    "id": "retry-condition",
+    "instruction": "Light edit of this operational instruction; preserve its logic.",
+    "text": "Do not retry a failed payment unless the provider confirms that no charge occurred. If the result is unknown, stop and reconcile it.",
+    "checks": {},
+    "manual": "Retry allowed only after confirmation of no charge; unknown outcome requires stop/reconciliation; no new actor or automatic retry."
+  },
+  {
+    "id": "unsupported-universal",
+    "instruction": "Light style edit only; do not change substantive claims. Flag factual concerns separately.",
+    "text": "The trial proves the treatment is safe for everyone.",
+    "checks": {
+      "preserve_literals": [
+        "proves",
+        "safe for everyone"
+      ],
+      "notes_required": true
+    },
+    "manual": "Claim preserved, universal safety/proof flagged; no unsupported factual correction or claim of verification."
+  },
+  {
+    "id": "unidentified-actor",
+    "instruction": "Improve readability if useful. Do not invent an actor or remove uncertainty.",
+    "text": "The files may have been deleted before the audit. It is not known who deleted them, or whether the deletion was intentional.",
+    "checks": {},
+    "manual": "Deletion remains uncertain; actor/intent unknown; no culprit or unsupported reason introduced."
+  },
+  {
+    "id": "draft-only",
+    "instruction": "Return only a lightly edited draft, with no explanation or preamble. Preserve my em dash.",
+    "text": "It is important to note that the brief was accepted—but the court did not decide the argument.",
+    "checks": {
+      "preserve_literals": [
+        "—"
+      ],
+      "notes_empty": true,
+      "forbid_literals": [
+        "Here is",
+        "Revised draft:",
+        "APPROVE"
+      ]
+    },
+    "manual": "Only prose in edited_text; no explanatory notes/preamble; acceptance not adoption of argument; intentional em dash preserved."
+  },
+  {
+    "id": "full-rewrite",
+    "instruction": "Rewrite this into a concise, natural personal LinkedIn update. You may reorganize the prose and remove redundant headings. Preserve my actual experience and every limitation; do not invent a lesson, outcome or opinion.",
+    "text": "## What happened\n\nI tested two note-taking templates with four colleagues over three weeks. This was a small trial. It is important to note that this was a small trial.\n\n## Why it matters\n\nThe shorter template was easier for all four colleagues to scan. This finding is important because all four colleagues could scan it more easily. We did not measure whether either template improved decisions.\n\n## What happens next\n\nWe may try the shorter template with a second team if that team agrees. We have not decided to roll it out. For now, the next step has not been decided.",
+    "checks": {
+      "preserve_literals": [
+        "four",
+        "three weeks"
+      ]
+    },
+    "manual": "Meaningful reduction in redundant framing/structure; actual first-person test retained; small trial and scanning benefit limited to four colleagues; no measured decision benefit; second-team test conditional; no rollout decision or invented personal lesson."
+  },
+  {
+    "id": "financial-ceiling",
+    "instruction": "Rewrite this customer-facing paragraph so it is clearer and less bureaucratic. Do not alter eligibility, discretion, amount, deadline, or payment status.",
+    "text": "For the avoidance of doubt, eligible customers may receive a service credit of up to $30,000 if they submit a request by June 30 and the vendor approves that request. The maximum is not a guaranteed payment. No credit has been awarded under this proposal.",
+    "checks": {
+      "preserve_literals": [
+        "$30,000",
+        "June 30"
+      ]
+    },
+    "manual": "Only eligible customers; discretionary up-to ceiling; request deadline and vendor approval both required; no promised/awarded payment; no-credit-yet and proposal posture retained."
+  }
+]
