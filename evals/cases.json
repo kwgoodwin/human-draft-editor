@@ -170,5 +170,94 @@
       ]
     },
     "manual": "Only eligible customers; discretionary up-to ceiling; request deadline and vendor approval both required; no promised/awarded payment; no-credit-yet and proposal posture retained."
+  },
+  {
+    "id": "quantifier-and-tense",
+    "instruction": "Light edit for clarity. Preserve every factual limit, degree word, modal, and tense.",
+    "text": "Most users have seen at least some improvement since March, but only two teams may adopt the process next quarter. The pilot is generally expected to continue through June.",
+    "checks": {
+      "preserve_literals": [
+        "Most",
+        "at least some",
+        "only two",
+        "may",
+        "generally expected",
+        "through June"
+      ],
+      "forbid_literals": [
+        "Users saw improvement",
+        "will adopt",
+        "continues through June"
+      ]
+    },
+    "manual": "Does not broaden most users to all users, remove the minimum/partial-improvement qualification, change the two-team limit, turn may into will, or replace expected future continuation with a present fact."
+  },
+  {
+    "id": "draft-only-unresolved-conflict",
+    "instruction": "Return only a light edit, with no notes, preamble, or explanation. Do not correct facts.",
+    "text": "The memo says the hearing is on June 4. Its final paragraph says the hearing was moved to June 11.",
+    "checks": {
+      "preserve_literals": [
+        "June 4",
+        "June 11"
+      ],
+      "notes_empty": true
+    },
+    "manual": "Strict draft-only output contains no appended warning. It preserves the unresolved conflict rather than silently choosing a date, reconciling it without authority, or claiming the text is verified."
+  },
+  {
+    "id": "light-edit-structure-boundary",
+    "instruction": "Light edit only. Improve local wording but retain the paragraph order, headings, and sections.",
+    "text": "## Background\n\nThe review started in April. It is important to note that the scope was limited.\n\n## Findings\n\nThe team found two defects. Neither defect established a security breach.\n\n## Next steps\n\nThe team may test a fix after approval.",
+    "checks": {
+      "preserve_literals": [
+        "## Background",
+        "## Findings",
+        "## Next steps"
+      ]
+    },
+    "manual": "May remove announcement framing locally, but does not reorder the three sections, merge them, delete a section, or rewrite headings merely to show activity. It retains the limited scope, two-defect count, no-breach conclusion, and conditional next step."
+  },
+  {
+    "id": "author-conventions",
+    "instruction": "Lightly edit for clarity. Preserve UK spelling, no serial comma, established capitalization and the legal register.",
+    "text": "The organisation shall notify suppliers, customers and regulators if it identifies a material error. The colour labels are defined in Appendix A.",
+    "checks": {
+      "preserve_literals": [
+        "organisation shall",
+        "suppliers, customers and regulators",
+        "colour labels",
+        "Appendix A"
+      ],
+      "forbid_literals": [
+        "organization will",
+        "customers, and regulators",
+        "color labels"
+      ]
+    },
+    "manual": "Retains UK spelling, no serial comma, defined-term capitalization, and shall rather than downgrading the legal obligation to will."
+  },
+  {
+    "id": "follow-up-scope",
+    "instruction": "This is a follow-up to an accepted edit. Shorten only the opening sentence; leave every other sentence unchanged.",
+    "text": "At this point in time, the project is scheduled to begin on May 12. The project may include 18 accounts if security approves it. We have not measured any savings.",
+    "checks": {
+      "preserve_literals": [
+        "The project may include 18 accounts if security approves it.",
+        "We have not measured any savings."
+      ]
+    },
+    "manual": "Shortens only the opening. It does not polish, restyle, reorder, or otherwise revisit the two accepted sentences."
+  },
+  {
+    "id": "long-document-consistency",
+    "instruction": "Lightly edit this two-section policy excerpt. Preserve the defined term and its capitalization consistently across both sections.",
+    "text": "## Intake\n\nEach Covered Customer may submit a request.\n\n## Review\n\nThe covered customer receives a response after review.",
+    "checks": {
+      "preserve_literals": [
+        "Covered Customer"
+      ]
+    },
+    "manual": "Uses the defined term Covered Customer consistently in both sections; does not casually lowercase the second reference or create an inconsistent synonym."
   }
 ]

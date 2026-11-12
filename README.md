@@ -47,7 +47,7 @@ The condition and uncertainty survive. See [more synthetic examples](examples/be
 
 ## Evaluation and limits
 
-The repository contains **20 distinct synthetic scenarios**, not a claim that the final version passed a fresh 20-case benchmark. Fourteen earlier cases passed literal checks and Sol's semantic review. Astra then critiqued the design and proposed six difficult cases; five met the semantic rubric initially, and one led to clearer handling of an impossible word limit. The two affected behaviors passed targeted retesting.
+The repository contains **26 distinct synthetic scenarios**, not a claim that the current version passed a fresh 26-case benchmark. Fourteen earlier cases passed literal checks and Sol's semantic review. Astra then critiqued the design and proposed six difficult cases; five met the semantic rubric initially, and one led to clearer handling of an impossible word limit. The two affected behaviors passed targeted retesting. Six later scenarios cover meaning-preservation and editing-scope regressions and await a fresh full behavioral run.
 
 The other cases were not all rerun after that small change. No human-preference study, cross-model benchmark, detector test or measured quality improvement is claimed. The retest reused the editor session. [Results and exact outputs](evals/results/README.md) · [Evaluation procedure](evals/REVIEW.md).
 
