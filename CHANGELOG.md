@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.0.1 — 2026-11-12
 
 - Added explicit protection for quantifiers, scope, degree, modal verbs, and tense or timing.
 - Defined the boundary of a light edit and made audit output location-specific and prioritized.
