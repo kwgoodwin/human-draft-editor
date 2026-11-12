@@ -69,6 +69,6 @@ A mechanical pass checks only selected literals and output contracts. Read each 
 
 ## License and acknowledgments
 
-Maintained by Kirk Goodwin. Developed with AI assistance, including Sol implementation/review and a bounded Astra critique. Released under the [MIT license](LICENSE). See [NOTICE.md](NOTICE.md) for the relationship to the private editing workflow and earlier influences.
+Maintained by Kirk Goodwin. Human Draft Editor grew out of the private editorial workflow for [Clearon AI](https://clearon-ai.com), which helps law firms and in-house counsel navigate AI governance, contracts, and legal risk with plain-English guidance. Developed with AI assistance, including Sol implementation/review and a bounded Astra critique. Released under the [MIT license](LICENSE). See [NOTICE.md](NOTICE.md) for the relationship to the private editing workflow and earlier influences.
 
 Feedback is welcome through GitHub issues, especially a synthetic example that demonstrates a change in meaning or loss of voice. Do not submit confidential drafts.
